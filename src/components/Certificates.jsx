@@ -1,0 +1,145 @@
+import { useState } from 'react';
+
+const Certificates = ({ isDark }) => {
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+
+  const certificates = [
+    {
+      id: 1,
+      title: 'CERT1',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },
+    {
+      id: 1,
+      title: 'CERT2',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },{
+      id: 1,
+      title: 'CERT3',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },{
+      id: 1,
+      title: 'CERT4',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },{
+      id: 1,
+      title: 'CERT5',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },{
+      id: 1,
+      title: 'CERT6',
+      issuer: 'CERTIFICADORA',
+      date: 'DATA',
+      image: 'CAMINHO DA IMAGEM',
+      credentialUrl: '#',
+    },
+  ];
+
+  return (
+    <section id="certificados" className="min-h-screen py-20 px-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Título da seção */}
+        <div className="mb-16 text-left">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Certificados</h2>
+          <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-500"></div>
+        </div>
+
+        {/* Grid de certificados */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {certificates.map((cert) => (
+            <div
+              key={cert.id}
+              onClick={() => setSelectedCertificate(cert)}
+              className={`group rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 ${
+                isDark
+                  ? 'bg-white/5 hover:bg-white/10 border border-white/10'
+                  : 'bg-black/5 hover:bg-black/10 border border-black/10'
+              }`}
+            >
+              {/* Imagem placeholder do certificado */}
+              <div className="aspect-[4/3] bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden flex items-center justify-center">
+                <div className="text-4xl opacity-20">{cert.title.charAt(0)}</div>
+              </div>
+
+              {/* Informações do certificado */}
+              <div className="p-4 space-y-2">
+                <h3 className="font-bold text-lg line-clamp-2">{cert.title}</h3>
+                <p className="text-sm opacity-70">{cert.issuer}</p>
+                <p className="text-xs opacity-50">{cert.date}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Modal de certificado */}
+        {selectedCertificate && (
+          <div
+            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-8"
+            onClick={() => setSelectedCertificate(null)}
+          >
+            <div
+              className={`max-w-4xl w-full rounded-2xl overflow-hidden ${
+                isDark ? 'bg-zinc-900 border border-white/10' : 'bg-white border border-black/10'
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Imagem do certificado */}
+              <div className="aspect-[4/3] bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden flex items-center justify-center">
+                <div className="text-9xl opacity-20">{selectedCertificate.title.charAt(0)}</div>
+              </div>
+
+              {/* Detalhes */}
+              <div className="p-8 space-y-4">
+                <h3 className="text-3xl font-bold">{selectedCertificate.title}</h3>
+                <p className="text-xl opacity-70">{selectedCertificate.issuer}</p>
+                <p className="opacity-50">Emitido em {selectedCertificate.date}</p>
+
+                <div className="flex gap-4 pt-4">
+                  <a
+                    href={selectedCertificate.credentialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`px-6 py-3 rounded-full transition-all ${
+                      isDark
+                        ? 'bg-white text-black hover:bg-white/90'
+                        : 'bg-black text-white hover:bg-black/90'
+                    }`}
+                  >
+                    Ver credencial
+                  </a>
+                  <button
+                    onClick={() => setSelectedCertificate(null)}
+                    className={`px-6 py-3 rounded-full border transition-all ${
+                      isDark
+                        ? 'border-white/30 hover:bg-white/10'
+                        : 'border-black/30 hover:bg-black/10'
+                    }`}
+                  >
+                    Fechar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
+export default Certificates;
