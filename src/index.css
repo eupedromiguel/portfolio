@@ -4,7 +4,11 @@
 
 @layer base {
   * {
-    cursor: none;
+    cursor: none !important;
+  }
+
+  a, button, [role="button"], [onclick] {
+    cursor: none !important;
   }
 
   body {

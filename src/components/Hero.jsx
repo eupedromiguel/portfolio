@@ -1,11 +1,24 @@
+import bgAstronaut from '../imgs/BG_astrounaut.jpg';
+
 const Hero = ({ isDark }) => {
+  const backgroundOpacity = 0.5; // Ajuste este valor entre 0 (invisível) e 1 (totalmente visível)
+
   return (
     <section
       id="comecar"
-      className={`min-h-screen flex items-center justify-center relative overflow-hidden ${
-        isDark ? 'stars-background' : ''
-      }`}
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
+      {/* Background com opacidade controlável */}
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: `url(${bgAstronaut})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: backgroundOpacity,
+        }}
+      />
       {/* Sidebar com ícones sociais */}
       <div className="fixed left-8 top-1/2 -translate-y-1/2 flex flex-col gap-6 z-30">
         <a
@@ -53,9 +66,23 @@ const Hero = ({ isDark }) => {
       {/* Container principal */}
       <div className="max-w-4xl mx-auto px-8 text-center relative z-10">
         {/* Badge "Disponível para trabalhar" */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-green-500/30 bg-green-500/10 mb-8">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-          <span className="text-sm text-green-500">Disponível para trabalhar</span>
+        <div
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-8 ${
+            isDark
+              ? 'border-green-500/30 bg-green-500/10'
+              : 'border-green-900/30 bg-green-900/10'
+          }`}
+        >
+          <span
+            className={`w-2 h-2 rounded-full animate-pulse ${
+              isDark ? 'bg-green-500' : 'bg-green-700'
+            }`}
+          ></span>
+          <span
+            className={`text-sm ${isDark ? 'text-green-500' : 'text-green-900'}`}
+          >
+            Disponível para trabalhar
+          </span>
         </div>
 
         {/* Headline */}

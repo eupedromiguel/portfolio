@@ -21,13 +21,22 @@ const Navbar = ({ isDark, toggleTheme }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-        isScrolled
+      className="fixed top-0 left-0 right-0 z-40"
+      style={{
+        backgroundColor: isScrolled
           ? isDark
-            ? 'bg-black/80 backdrop-blur-md border-b border-white/10'
-            : 'bg-white/80 backdrop-blur-md border-b border-black/10'
-          : 'bg-transparent'
-      }`}
+            ? 'rgba(0, 0, 0, 0.8)'
+            : 'rgba(255, 255, 255, 0.8)'
+          : 'transparent',
+        backdropFilter: isScrolled ? 'blur(7px)' : 'blur(0px)',
+        WebkitBackdropFilter: isScrolled ? 'blur(7px)' : 'blur(0px)',
+        borderBottom: isScrolled
+          ? isDark
+            ? '1px solid rgba(255, 255, 255, 0.1)'
+            : '1px solid rgba(0, 0, 0, 0.1)'
+          : '1px solid transparent',
+        transition: 'all 0.3s ease-in-out',
+      }}
     >
       <div className="max-w-6xl mx-auto px-8 py-6">
         <div className="flex items-center justify-center">
@@ -40,42 +49,54 @@ const Navbar = ({ isDark, toggleTheme }) => {
           >
             <button
               onClick={() => scrollToSection('comecar')}
-              className="text-sm hover:opacity-70 transition-opacity"
+              className={`text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               Home
             </button>
-            <span className="text-white/30">·</span>
+            <span className={isDark ? 'text-white/30' : 'text-black/30'}>·</span>
             <button
               onClick={() => scrollToSection('experiencia')}
-              className="text-sm hover:opacity-70 transition-opacity"
+              className={`text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               Experiência
             </button>
-            <span className="text-white/30">·</span>
+            <span className={isDark ? 'text-white/30' : 'text-black/30'}>·</span>
             <button
               onClick={() => scrollToSection('projetos')}
-              className="text-sm hover:opacity-70 transition-opacity"
+              className={`text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               Projetos
             </button>
-            <span className="text-white/30">·</span>
+            <span className={isDark ? 'text-white/30' : 'text-black/30'}>·</span>
             <button
               onClick={() => scrollToSection('sobre')}
-              className="text-sm hover:opacity-70 transition-opacity"
+              className={`text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               Sobre mim
             </button>
-            <span className="text-white/30">·</span>
+            <span className={isDark ? 'text-white/30' : 'text-black/30'}>·</span>
             <button
               onClick={() => scrollToSection('certificados')}
-              className="text-sm hover:opacity-70 transition-opacity"
+              className={`text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               Certificados
             </button>
-            <span className="text-white/30">·</span>
+            <span className={isDark ? 'text-white/30' : 'text-black/30'}>·</span>
             <button
               onClick={toggleTheme}
-              className="flex items-center gap-2 text-sm hover:opacity-70 transition-opacity"
+              className={`flex items-center gap-2 text-sm transition-colors ${
+                isDark ? 'hover:opacity-70' : 'hover:text-black/10'
+              }`}
             >
               {isDark ? (
                 <>

@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import bgLion from '../imgs/BG_lion.png';
 
 const Certificates = ({ isDark }) => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const backgroundOpacity = 0.5; // Ajuste este valor entre 0 (invisível) e 1 (totalmente visível)
 
   const certificates = [
     {
@@ -51,7 +53,18 @@ const Certificates = ({ isDark }) => {
   ];
 
   return (
-    <section id="certificados" className="min-h-screen py-20 px-8">
+    <section id="certificados" className="min-h-screen py-20 px-8 relative overflow-hidden">
+      {/* Background com opacidade controlável */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          backgroundImage: `url(${bgLion})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+          opacity: backgroundOpacity,
+        }}
+      />
       <div className="max-w-6xl mx-auto">
         {/* Título da seção */}
         <div className="mb-16 text-left">
