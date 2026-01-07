@@ -2,8 +2,18 @@ import { useEffect, useState } from 'react';
 
 const CustomCursor = ({ isDark }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Verifica se é mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    // Verifica no mount e em resize
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
     const updateCursorPosition = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
@@ -12,8 +22,12 @@ const CustomCursor = ({ isDark }) => {
 
     return () => {
       window.removeEventListener('mousemove', updateCursorPosition);
+      window.removeEventListener('resize', checkMobile);
     };
   }, []);
+
+  // Não renderiza o cursor em mobile
+  if (isMobile) return null;
 
   return (
     <svg

@@ -3,12 +3,15 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    cursor: none !important;
-  }
+  /* Cursor personalizado apenas em telas maiores que mobile */
+  @media (min-width: 768px) {
+    * {
+      cursor: none !important;
+    }
 
-  a, button, [role="button"], [onclick] {
-    cursor: none !important;
+    a, button, [role="button"], [onclick] {
+      cursor: none !important;
+    }
   }
 
   body {

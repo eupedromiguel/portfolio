@@ -14,7 +14,7 @@ const Hero = ({ isDark }) => {
         style={{
           backgroundImage: `url(${bgAstronaut})`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: window.innerWidth < 768 ? 'center left' : 'center',
           backgroundRepeat: 'no-repeat',
           opacity: backgroundOpacity,
         }}
