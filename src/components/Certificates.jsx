@@ -1,9 +1,15 @@
 import { useState, useEffect } from 'react';
 import bgLion from '../imgs/BG_lion.png';
+import programWebImg from '../imgs/Program_web-img.jpg';
+import EstruturaDados from '../imgs/estrutura_de_dados-img.jpg';
+import DirAutorCiber from '../imgs/Dir.Autoral_Crim.Ciber-img.jpg';
+import AssisAdmin from '../imgs/Assis.Admin-img.jpg';
+import AnalistSuporTec from '../imgs/Analista_Supor_Tec-img.jpg';
+import ManutNoteb from '../imgs/Noteb-img.jpg';
 
 const Certificates = ({ isDark }) => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
-  const backgroundOpacity = 0.5; // Ajuste este valor entre 0 (invisível) e 1 (totalmente visível)
+  const backgroundOpacity = 0.3; // Ajustar este valor entre 0 (invisível) e 1 (totalmente visível)
 
   // Bloquear scroll quando modal estiver aberto
   useEffect(() => {
@@ -20,47 +26,47 @@ const Certificates = ({ isDark }) => {
   const certificates = [
     {
       id: 1,
-      title: 'CERT1',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
-      credentialUrl: '#',
+      title: 'Programador Web',
+      issuer: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul',
+      date: '10/07/2025',
+      image: programWebImg,
+      credentialUrl: 'https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=68701f93-027c-41aa-a7f9-81d00aa81322',
     },
     {
       id: 1,
-      title: 'CERT2',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
+      title: 'Estrutura de Dados',
+      issuer: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul',
+      date: '05/03/2025',
+      image: EstruturaDados,
+      credentialUrl: 'https://aprendamais.mec.gov.br/mod/simplecertificate/verify.php?code=67c8efb6-b7c8-4970-9342-a46fac1f02a4',
+    },{
+      id: 1,
+      title: 'Crimes Cibernéticos, Direito Autoral',
+      issuer: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul',
+      date: '07/01/2025',
+      image: DirAutorCiber,
+      credentialUrl: 'https://aprendamais.mec.gov.br/mod/simplecertificate/verify.php?code=677d7052-04ac-4fbb-9ab8-0b00ac1f030b',
+    },{
+      id: 1,
+      title: 'Analista de Suporte Técnico',
+      issuer: 'Fênix Cursos',
+      date: '13/10/2012',
+      image: AnalistSuporTec,
       credentialUrl: '#',
     },{
       id: 1,
-      title: 'CERT3',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
+      title: 'Manutenção em Notebooks',
+      issuer: 'Fênix Cursos',
+      date: '02/05/2014',
+      image: ManutNoteb,
       credentialUrl: '#',
     },{
       id: 1,
-      title: 'CERT4',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
-      credentialUrl: '#',
-    },{
-      id: 1,
-      title: 'CERT5',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
-      credentialUrl: '#',
-    },{
-      id: 1,
-      title: 'CERT6',
-      issuer: 'CERTIFICADORA',
-      date: 'DATA',
-      image: 'CAMINHO DA IMAGEM',
-      credentialUrl: '#',
+      title: 'Assistente Administrativo',
+      issuer: 'Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul',
+      date: '22/05/2025',
+      image: AssisAdmin,
+      credentialUrl: 'https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=682f6e86-70dc-4af4-b9d4-2a100ade0005',
     },
   ];
 
@@ -97,9 +103,13 @@ const Certificates = ({ isDark }) => {
                   : 'bg-black/5 hover:bg-black/10 border border-black/10'
               }`}
             >
-              {/* Imagem placeholder do certificado */}
+              {/* Imagem do certificado */}
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden flex items-center justify-center">
-                <div className="text-4xl opacity-20">{cert.title.charAt(0)}</div>
+                {cert.image && cert.image !== 'CAMINHO DA IMAGEM' ? (
+                  <img src={cert.image} alt={cert.title} className="object-cover" />
+                ) : (
+                  <div className="text-4xl opacity-20">{cert.title.charAt(0)}</div>
+                )}
               </div>
 
               {/* Informações do certificado */}
@@ -129,7 +139,11 @@ const Certificates = ({ isDark }) => {
         >
           {/* Imagem do certificado */}
           <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden flex items-center justify-center">
-            <div className="text-6xl opacity-20">{selectedCertificate.title.charAt(0)}</div>
+            {selectedCertificate.image && selectedCertificate.image !== 'CAMINHO DA IMAGEM' ? (
+              <img src={selectedCertificate.image} alt={selectedCertificate.title} className="w-full h-full object-contain" />
+            ) : (
+              <div className="text-6xl opacity-20">{selectedCertificate.title.charAt(0)}</div>
+            )}
           </div>
 
           {/* Detalhes */}
