@@ -1,9 +1,8 @@
 const DownloadResume = ({ isDark }) => {
   const handleDownload = () => {
-    // Você pode substituir este link pelo caminho real do seu currículo
     const link = document.createElement('a');
-    link.href = '/curriculo-pedro-miguel.pdf';
-    link.download = 'Curriculo-Pedro-Miguel.pdf';
+    link.href = '/Currículo - Pedro Miguel.pdf';
+    link.download = 'Currículo - Pedro Miguel.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

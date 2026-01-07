@@ -1,4 +1,5 @@
 import clinicaImg from '../imgs/clinica-img.png';
+import artistFyImg from '../imgs/artistFy-img.jpg';
 
 const Projects = ({ isDark }) => {
   const projects = [
@@ -7,18 +8,18 @@ const Projects = ({ isDark }) => {
       description:
         'Sistema de agendamento médico completo com autenticação, automação de e-mails e gestão de consultas.',
       image: clinicaImg,
-      technologies: ['Tailwind CSS', 'Firebase', 'React.js', 'Node.js', 'Vite', 'GCP'],
+      technologies: ['Tailwind CSS', 'Firebase', 'React.js', 'Node.js', 'Vite', 'GCP', 'Nodemailer'],
       githubUrl: 'https://github.com/eupedromiguel/dr-roberto-nigro',
       liveUrl: 'https://consultorio-app-2156a.web.app/',
     },
     {
-      title: 'PROJETO 2',
+      title: 'artistFy',
       description:
-        'DESCRIÇÃO',
-      image: 'CAMINHO DA IMAGEM',
-      technologies: ['Tailwind CSS', 'Firebase', 'React.js', 'Node.js', 'Vite'],
-      githubUrl: 'LINK DO REPOSITÓRIO',
-      liveUrl: 'LINK DO SITE',
+        'Aplicação Web para pesquisar dados de artistas no Spotify, visualização de faixas e albúns, além da geração e exportação de relatórios em Excel e PDF, utilizando dados públicos da Spotify Web API',
+      image: artistFyImg,
+      technologies: ['Tailwind CSS', 'Vercel', 'React.js', 'Node.js', 'Vite', 'Express'],
+      githubUrl: 'https://github.com/eupedromiguel/artistfy-app',
+      liveUrl: 'https://artistfy.vercel.app/',
     },
     {
       title: 'PROJETO 3',
