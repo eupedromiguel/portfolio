@@ -1,5 +1,6 @@
 import clinicaImg from '../imgs/clinica-img.png';
 import artistFyImg from '../imgs/artistFy-img.jpg';
+import portfolio from '../imgs/portfolio-img.jpg';
 
 const Projects = ({ isDark }) => {
   const projects = [
@@ -22,12 +23,12 @@ const Projects = ({ isDark }) => {
       liveUrl: 'https://artistfy.vercel.app/',
     },
     {
-      title: 'PROJETO 3',
+      title: 'Este portfólio',
       description:
-        'DESCRIÇÃO',
-      image: 'CAMINHO DA IMAGEM',
-      technologies: ['Tailwind CSS', 'Firebase', 'React.js', 'Node.js', 'Vite'],
-      githubUrl: 'LINK DO REPOSITÓRIO',
+        'Desenvolvido como parte do meu processo de consolidação em front-end moderno, utilizando React, Vite e Tailwind CSS. A interface foi pensada para oferecer uma experiência clara e objetiva, com atenção a responsividade, consistência visual e boas práticas de UI.',
+      image: portfolio,
+      technologies: ['Tailwind CSS', 'Vercel', 'React.js', 'Node.js', 'Vite'],
+      githubUrl: 'https://github.com/eupedromiguel/portfolio',
       liveUrl: 'LINK DO SITE',
     },
   ];
