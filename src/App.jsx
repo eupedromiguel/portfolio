@@ -26,7 +26,7 @@ function App() {
       </main>
 
       <footer className="py-12 text-center opacity-50 border-t border-white/10">
-        <p>© Pedro Miguel - Todos os direitos reservados.</p>
+        <p>© Pedro Miguel</p>
       </footer>
     </>
   );
