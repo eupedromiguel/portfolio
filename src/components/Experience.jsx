@@ -113,12 +113,20 @@ const Tree = ({ nodes, isDark, level = 0 }) => {
 const Experience = ({ isDark }) => {
   const experiences = [
     {
-      company: 'Junior | Estágiário',
-      role: 'Curso técnico em Análise e Desenvolvimento de Sistemas',
-      period: 'UNICORP - Faculdades, desde julho de 2025',
-      current: true,
-      description:
+      company1: 'Graduando',
+      role1: 'Segurança da Informação e Defesa Cibernética',
+      period1: 'INFNET',
+      current1: true,
+      description1:
+        '',
+
+      company2: 'Junior | Estágiário',
+      role2: 'Técnico em Análise e Desenvolvimento de Sistemas',
+      period2: 'UNICORP - Faculdades, desde julho de 2025',
+      current2: false,
+      description2:
         'Soft Skills : Documentação clara de código e APIs para facilitar colaboração, Debugging sistemático, análise de logs para resolução de problemas e estudo constante de novas tecnologias.',
+
       responsibilitiesTree: [
         {
           label: 'Linguagens',
@@ -187,7 +195,6 @@ const Experience = ({ isDark }) => {
           type: 'folder',
           children: [
             { label: 'DevOps', type: 'file' },
-            { label: 'Cibersegurança', type: 'file' },
             { label: 'SEO', type: 'file' },
             { label: 'Acessibilidade', type: 'file' },
             { label: 'Docker', type: 'file' },
@@ -196,6 +203,7 @@ const Experience = ({ isDark }) => {
       ],
     },
   ];
+
 
   return (
     <section id="experiencia" className="min-h-screen py-20 px-8">
@@ -217,24 +225,25 @@ const Experience = ({ isDark }) => {
             >
               {/* Coluna esquerda - Empresa */}
               <div className="space-y-2">
-                <h3 className="text-xl font-semibold">{exp.company}</h3>
-                <p className="opacity-70">{exp.location}</p>
+                <h3 className="text-xl font-semibold">{exp.company1}</h3>
+                <p className="opacity-70">{exp.location1}</p>
               </div>
 
               {/* Coluna direita - Detalhes */}
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
-                  <h4 className="text-2xl font-light">{exp.role}</h4>
+                  <h4 className="text-2xl font-light">{exp.role1}</h4>
+
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <span className="opacity-70">{exp.period}</span>
+                  <span className="opacity-70">{exp.period1}</span>
                   <span className="opacity-30">—</span>
-                  {exp.current && (
+                  {exp.current1 && (
                     <span
                       className={`px-3 py-1 rounded-full text-sm ${isDark
-                          ? 'bg-green-500/20 text-green-400 border border-green-500/30'
-                          : 'bg-green-500/20 text-green-600 border border-green-500/30'
+                        ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                        : 'bg-green-500/20 text-green-600 border border-green-500/30'
                         }`}
                     >
                       Atual
@@ -242,7 +251,50 @@ const Experience = ({ isDark }) => {
                   )}
                 </div>
 
-                <p className="opacity-80 leading-relaxed">{exp.description}</p>
+                <p className="opacity-80 leading-relaxed">{exp.description1}</p>
+
+                
+              </div>
+            </div>
+          ))}
+        </div>
+        <br />
+        {/* Lista de experiências 2 */}
+        <div className="space-y-12">
+          {experiences.map((exp, index) => (
+            <div
+              key={index}
+              className="grid md:grid-cols-[300px_1fr] gap-8"
+            >
+              {/* Coluna esquerda - Empresa */}
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold">{exp.company2}</h3>
+                <p className="opacity-70">{exp.location2}</p>
+              </div>
+
+              {/* Coluna direita - Detalhes */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-4">
+                  <h4 className="text-2xl font-light">{exp.role2}</h4>
+
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <span className="opacity-70">{exp.period2}</span>
+                  
+                  {exp.current && (
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm ${isDark
+                        ? 'bg-green-500/20 text-green-400 border border-green-500/30'
+                        : 'bg-green-500/20 text-green-600 border border-green-500/30'
+                        }`}
+                    >
+                      Atual
+                    </span>
+                  )}
+                </div>
+
+                <p className="opacity-80 leading-relaxed">{exp.description2}</p>
 
                 {/* Árvore de responsabilidades (hierarquia + linhas) */}
                 <div className="mt-4">
@@ -261,6 +313,7 @@ const Experience = ({ isDark }) => {
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );
