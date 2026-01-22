@@ -59,6 +59,7 @@ const About = ({ isDark }) => {
               </h4>
               <p className="opacity-80 mb-4 md:mb-6 text-sm md:text-base">
                 Posso impulsionar seu projeto ou fazer parte da sua equipe.
+                <br />
                 Email : pedromiguelataides@gmail.com
               </p>
 

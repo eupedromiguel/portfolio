@@ -211,7 +211,7 @@ const Experience = ({ isDark }) => {
         {/* Título da seção */}
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Experiência
+            Formação
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-blue-500 to-purple-500"></div>
         </div>
