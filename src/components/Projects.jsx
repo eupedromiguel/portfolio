@@ -1,6 +1,7 @@
 import clinicaImg from '../imgs/clinica-img.png';
 import artistFyImg from '../imgs/artistFy-img.jpg';
 import portfolio from '../imgs/portfolio-img.jpg';
+import techflow from '../imgs/techflow.png';
 
 const Projects = ({ isDark }) => {
   const projects = [
@@ -14,6 +15,24 @@ const Projects = ({ isDark }) => {
       liveUrl: 'https://consultorio-app-2156a.web.app/',
     },
     {
+      title: 'Este portfólio',
+      description:
+        'Desenvolvido como parte do meu processo de consolidação em front-end moderno, utilizando React, Vite e Tailwind CSS. A interface foi pensada para oferecer uma experiência clara e objetiva, com atenção a responsividade, consistência visual e boas práticas de UI.',
+      image: portfolio,
+      technologies: ['Tailwind CSS', 'Vercel', 'React.js', 'Node.js', 'Vite'],
+      githubUrl: 'https://github.com/eupedromiguel/portfolio',
+      liveUrl: 'https://pedromiguel.vercel.app/',
+    },
+    {
+      title: 'TechFlow - Teste para vaga Front End',
+      description:
+        'Landing page responsiva para a TechFlow Solutions, desenvolvida com HTML5, CSS3 (Sass), JavaScript e PHP.',
+      image: techflow,
+      technologies: ['CSS3 (Sass)','JavaScript (Vanilla)', 'Firebase', 'PHP com PDO', 'Vite'],
+      githubUrl: 'https://github.com/eupedromiguel/teste-frontend-developer',
+      liveUrl: 'https://teste-ellos.web.app/',
+    },
+    {
       title: 'artistFy',
       description:
         'Aplicação Web para pesquisar dados de artistas no Spotify, visualização de faixas e albúns, além da geração e exportação de relatórios em Excel e PDF, utilizando dados públicos da Spotify Web API',
@@ -21,15 +40,6 @@ const Projects = ({ isDark }) => {
       technologies: ['Tailwind CSS', 'Vercel', 'React.js', 'Node.js', 'Vite', 'Express'],
       githubUrl: 'https://github.com/eupedromiguel/artistfy-app',
       liveUrl: 'https://artistfy.vercel.app/',
-    },
-    {
-      title: 'Este portfólio',
-      description:
-        'Desenvolvido como parte do meu processo de consolidação em front-end moderno, utilizando React, Vite e Tailwind CSS. A interface foi pensada para oferecer uma experiência clara e objetiva, com atenção a responsividade, consistência visual e boas práticas de UI.',
-      image: portfolio,
-      technologies: ['Tailwind CSS', 'Vercel', 'React.js', 'Node.js', 'Vite'],
-      githubUrl: 'https://github.com/eupedromiguel/portfolio',
-      liveUrl: 'LINK DO SITE',
     },
   ];
 
@@ -51,7 +61,7 @@ const Projects = ({ isDark }) => {
                 isDark
                   ? 'bg-white/5 hover:bg-white/10 border border-white/10'
                   : 'bg-black/5 hover:bg-black/10 border border-black/10'
-              } ${index === 0 ? 'md:col-span-2' : ''}`}
+              } ${index === 0 || index === 3 ? 'md:col-span-2' : ''}`}
             >
               {/* Imagem do projeto */}
               <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 relative overflow-hidden">
