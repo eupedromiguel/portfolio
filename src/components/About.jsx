@@ -42,25 +42,28 @@ const About = ({ isDark }) => {
           {/* Texto */}
           <div className="space-y-4 md:space-y-6">
             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold">
-              Trazendo experiência de produção musical onde passei anos transformando ideias criativas em projetos concretos.
+              De 10 anos na produção musical para a infraestrutura e a segurança da informação.
             </h3>
 
             <div className="space-y-4 opacity-80 leading-relaxed text-sm md:text-base">
               <p>
-                Estudante em formação, com base criativa construída ao longo de anos de experiência em produção musical, onde transformei ideias em projetos concretos e tecnicamente consistentes. A tecnologia sempre esteve presente na minha trajetória, e hoje uno esse interesse aos estudos e ao desenvolvimento de projetos próprios. Na produção musical, aprendi que qualidade, assim como em código bem escrito, está nos detalhes. A mesma atenção dedicada à organização de projetos complexos, à precisão técnica e à consistência de processos, hoje aplico na escrita de código limpo, arquitetura de pastas e desenvolvimento de aplicações escaláveis.
-
-                A vivência profissional com artistas, produtores e gestores fortaleceu minha capacidade de traduzir necessidades criativas e de negócio em soluções técnicas viáveis, equilibrando inovação, prazos e estabilidade. Essa experiência contribuiu diretamente para minha comunicação, senso de responsabilidade técnica e visão de produto.
-
-                Concluí as disciplinas do curso técnico em Análise e Desenvolvimento de Sistemas, encontrando-me atualmente em fase de estágio para conclusão formal do curso. Paralelamente, estou iniciando a graduação em Cibersegurança, com foco em boas práticas, proteção de dados e arquitetura segura.
-
-                Atualmente desenvolvo meu primeiro projeto web full stack: um sistema de agendamento médico com autenticação via Firebase, automação de e-mails e gestão de consultas. Busco constantemente aprimorar minha formação por meio de documentações oficiais e aplicação prática de boas práticas, priorizando cibersegurança, arquitetura escalável e manutenibilidade. Procuro oportunidades para contribuir com projetos reais, consolidar minha experiência prática e evoluir continuamente como desenvolvedor.
+                Sou profissional de TI com atuação em suporte técnico, infraestrutura e redes, em transição direcionada para a segurança da informação. Experiência como consultor de TI Júnior, onde dou suporte a usuários e endpoints, apoio na administração e implementação de redes e faço diagnóstico e manutenção de equipamentos, com participação pontual em análise de malware e resposta a incidentes.
+              </p>
+              <p>
+                Antes da tecnologia, atuei por 10 anos como produtor musical. Trabalhando com artistas, produtores e gestores, desenvolvi disciplina, atenção aos detalhes e capacidade de atuar sob pressão em projetos complexos. Levo essa mesma postura para o trabalho técnico: organização, documentação clara e responsabilidade com o que é entregue.
+              </p>
+              <p>
+                Sou técnico em Análise e Desenvolvimento de Sistemas e curso Segurança da Informação e Defesa Cibernética na Faculdade INFNET. Tenho as certificações Google Cybersecurity Certificate e ISO/IEC 27001:2022 Information Security Associate, além de cursos da Cisco em redes e segurança, e mantenho estudos práticos em laboratórios e em plataformas como TryHackMe e Hack The Box.
+              </p>
+              <p>
+                Busco oportunidades em operações de TI, redes, infraestrutura ou desenvolvimento seguro.
               </p>
             </div>
 
             {/* CTA */}
             <div className="pt-4 md:pt-6">
               <h4 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">
-                Pronto para dar vida às suas ideias?
+                Vamos conversar?
               </h4>
 
               <div className="flex flex-wrap gap-2 md:gap-3">

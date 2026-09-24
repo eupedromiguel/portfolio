@@ -101,18 +101,18 @@ const Hero = ({ isDark }) => {
 
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-          Olá, eu sou
+          Olá, me chamo
           <br />
-          Pedro Miguel!
+          Pedro Ataides!
         </h1>
 
         {/* Subtítulo */}
         <p className="text-lg sm:text-xl md:text-2xl mb-4">
-          <span className="font-semibold">Desenvolvedor Full Stack</span> de São Paulo, SP - Brasil.
+          <span className="font-semibold">TI e Infraestrutura | Segurança da Informação | Desenvolvimento Web FullStack</span> de São Paulo, SP - Brasil.
         </p>
 
         <p className="text-base sm:text-lg md:text-xl font-light opacity-80 mb-8">
-          Trabalho com foco em produtos web modernos.
+          Atuo com suporte técnico, redes e infraestrutura, em transição para a segurança da informação.
         </p>
 
         {/* Botões de ação */}

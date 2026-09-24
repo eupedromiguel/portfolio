@@ -6,7 +6,6 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import About from './components/About';
 import Certificates from './components/Certificates';
-import DownloadResume from './components/DownloadResume';
 
 function App() {
   const { isDark, toggleTheme } = useTheme();
@@ -21,7 +20,6 @@ function App() {
         <Experience isDark={isDark} />
         <Projects isDark={isDark} />
         <About isDark={isDark} />
-        <DownloadResume isDark={isDark} />
         <Certificates isDark={isDark} />
       </main>
 

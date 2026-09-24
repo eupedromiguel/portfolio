@@ -115,12 +115,12 @@ const Experience = ({ isDark }) => {
     {
       company1: 'Graduando',
       role1: 'Segurança da Informação e Defesa Cibernética',
-      period1: 'INFNET',
+      period1: 'Faculdade INFNET · desde jan/2026 · 2º semestre (previsão de término em 06/2028)',
       current1: true,
       description1:
-        '',
+        'Formação voltada à proteção de sistemas, redes e dados. Em paralelo, pratico em laboratórios com ferramentas defensivas e ofensivas (Wireshark, Nmap, Burp Suite, Splunk, Snort e OWASP ZAP), opero em Linux (Kali Linux) e estudo frameworks de mercado como MITRE ATT&CK e OWASP Top 10, além de pentest em aplicações web, APIs e LLMs. Complemento os estudos em plataformas como TryHackMe e Hack The Box e participando de eventos CTF (Capture The Flag).',
 
-      company2: 'Junior | Estágiário',
+      company2: 'Concluído',
       role2: 'Técnico em Análise e Desenvolvimento de Sistemas',
       period2: 'UNICORP - Faculdades, desde julho de 2025',
       current2: false,
