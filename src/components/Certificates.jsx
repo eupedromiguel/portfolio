@@ -124,7 +124,7 @@ const Certificates = ({ isDark }) => {
       issuerShort: 'IFRS',
       category: 'dev',
       date: '10/07/2025',
-      credentialUrl: 'https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=68701f93-027c-41aa-a7f9-81d00aa81322',
+      credentialUrl: '#',
     },
     {
       id: 4,
@@ -133,7 +133,7 @@ const Certificates = ({ isDark }) => {
       issuerShort: 'IFRS',
       category: 'dev',
       date: '05/03/2025',
-      credentialUrl: 'https://aprendamais.mec.gov.br/mod/simplecertificate/verify.php?code=67c8efb6-b7c8-4970-9342-a46fac1f02a4',
+      credentialUrl: '#',
     },
     {
       id: 5,
@@ -142,7 +142,7 @@ const Certificates = ({ isDark }) => {
       issuerShort: 'IFRS',
       category: 'law',
       date: '07/01/2025',
-      credentialUrl: 'https://aprendamais.mec.gov.br/mod/simplecertificate/verify.php?code=677d7052-04ac-4fbb-9ab8-0b00ac1f030b',
+      credentialUrl: '#',
     },
     {
       id: 6,
@@ -151,7 +151,7 @@ const Certificates = ({ isDark }) => {
       issuerShort: 'IFRS',
       category: 'admin',
       date: '22/05/2025',
-      credentialUrl: 'https://moodle.ifrs.edu.br/mod/simplecertificate/verify.php?code=682f6e86-70dc-4af4-b9d4-2a100ade0005',
+      credentialUrl: '#',
     },
     {
       id: 7,
@@ -270,20 +270,6 @@ const Certificates = ({ isDark }) => {
             )}
 
             <div className="flex gap-3 pt-3">
-              {selectedCertificate.credentialUrl !== '#' && (
-                <a
-                  href={selectedCertificate.credentialUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`px-5 py-2 rounded-full text-sm transition-all ${
-                    isDark
-                      ? 'bg-white text-black hover:bg-white/90'
-                      : 'bg-black text-white hover:bg-black/90'
-                  }`}
-                >
-                  Ver credencial
-                </a>
-              )}
               <button
                 onClick={() => setSelectedCertificate(null)}
                 className={`px-5 py-2 rounded-full border text-sm transition-all ${
